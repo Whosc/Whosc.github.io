@@ -11,3 +11,10 @@ npm install hexo-wordcount --save
 npm install gulp -g
 npm install gulp-minify-css gulp-uglify gulp-htmlmin gulp-htmlclean gulp --save
 ```
+
+> sitemap.xml
+```
+npm install hexo-generator-sitemap --save
+ 
+npm install hexo-generator-baidu-sitemap --save  #百度的
+```
