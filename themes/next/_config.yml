@@ -361,7 +361,7 @@ han: false
 # Disqus
 disqus:
   enable: false
-  shortname:
+  shortname: whosc
   count: true
 
 # Hypercomments
