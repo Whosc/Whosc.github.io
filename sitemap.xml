@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://whosc.github.io/2018/01/10/hexo%20start/</loc>
+    
+    <lastmod>2018-01-11T09:00:43.957Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://whosc.github.io/tags/index.html</loc>
     
-    <lastmod>2018-01-11T01:06:35.734Z</lastmod>
+    <lastmod>2018-01-11T08:55:01.476Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://whosc.github.io/categories/index.html</loc>
+    
+    <lastmod>2018-01-11T08:54:50.223Z</lastmod>
     
   </url>
   
@@ -12,20 +26,6 @@
     <loc>https://whosc.github.io/about/index.html</loc>
     
     <lastmod>2018-01-11T01:06:35.733Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://whosc.github.io/categories/index.html</loc>
-    
-    <lastmod>2018-01-11T01:06:35.733Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://whosc.github.io/2018/01/10/hexo%20start/</loc>
-    
-    <lastmod>2018-01-11T01:06:35.732Z</lastmod>
     
   </url>
   

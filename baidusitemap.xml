@@ -3,12 +3,9 @@
 
 
     
-    
-    
-    
   <url>
     <loc>https://whosc.github.io/2018/01/10/hexo%20start/</loc>
-    <lastmod>2018-01-11T01:06:35.732Z</lastmod>
+    <lastmod>2018-01-11T09:00:43.957Z</lastmod>
     <data>
         <display>
         <title>使用Hexo 快速搭建属于自己的博客！</title>
@@ -18,10 +15,16 @@
          
          
            
+             
+              <breadCrumb title="Others" url="https://whosc.github.io/categories/Others/"/>
+          
         </display>
     </data>
     </url>
 
+    
+    
+    
     
   <url>
     <loc>https://whosc.github.io/2018/01/10/hello-world/</loc>
