@@ -7,12 +7,12 @@ title: who's coder ?
 subtitle: Life is always hard!
 description: 程序猿的小生活！
 author: whosc
-language:
+language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://whosc.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
