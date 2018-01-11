@@ -17,6 +17,7 @@ $ sudo yum remove docker \
                   docker-selinux \
                   docker-engine
 ```
+<!--more-->
 ### 安装docker 
 ```
 yum install docker 
@@ -35,6 +36,7 @@ docker run
 
 exit : 从交互式的容器中退出
 ```
+
 ### 停止容器
 ```
 dokcer stop [容器名|容器ID]

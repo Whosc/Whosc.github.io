@@ -11,7 +11,7 @@ categories:
 
 ### 安装 php-imap
  网上安装php7-imap 扩展的教程大多都太老了，不适用与现在在php7的版本，走了不少弯路，希望能帮到看到的人。
-
+<!--more-->
 ### php -v //查看当前php的版本
 ```
 [root@vultr ~]# php -v
