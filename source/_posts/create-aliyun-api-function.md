@@ -1,5 +1,5 @@
 ---
-title: 生成阿里云api 签名示例
+title: php 实现生成阿里云api 签名的代码示例
 date: 2018-01-13
 tags: [php]
 categories:
