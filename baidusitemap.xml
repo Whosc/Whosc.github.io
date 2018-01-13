@@ -5,10 +5,10 @@
     
   <url>
     <loc>https://whosc.github.io/create-aliyun-api-function/</loc>
-    <lastmod>2018-01-13T03:43:25.044Z</lastmod>
+    <lastmod>2018-01-13T03:48:56.577Z</lastmod>
     <data>
         <display>
-        <title>生成阿里云api 签名示例</title>
+        <title>php 实现生成阿里云api 签名的代码示例</title>
         <pubTime>2018-01-12T16:00:00.000Z</pubTime>
         
         <tag>php</tag>
@@ -34,9 +34,9 @@
         <title>php7 安装imap 扩展</title>
         <pubTime>2018-01-10T16:00:00.000Z</pubTime>
         
-        <tag>运维</tag>
-         
         <tag>php</tag>
+         
+        <tag>运维</tag>
          
          
            
