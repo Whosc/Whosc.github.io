@@ -18,3 +18,13 @@ npm install hexo-generator-sitemap --save
  
 npm install hexo-generator-baidu-sitemap --save  #百度的
 ```
+
+> 博客模板参考
+
+```
+https://www.haomwei.com/
+
+https://yanm1ng.github.io/
+http://hejx.space/
+
+```
