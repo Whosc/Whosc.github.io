@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Magento1.x paypal 支付不成功问题 | who&#39;s coder ? | Life is always hard!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#2882C9">
+    
+    
+    <meta name="keywords" content="magento">
+    <meta name="description" content="之前magento 订单一直正常，后来查看订单的状态一直是在pengding 状态，查看后台报错了1Your current version of cURL php5 module is 7.29.0, which can prevent services that require TLS v1.2 from working correctly. It is recommended to upda">
+<meta name="keywords" content="magento">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Magento1.x paypal 支付不成功问题">
+<meta property="og:url" content="https://whosc.github.io/magento-paypal-need-curl-update/index.html">
+<meta property="og:site_name" content="who&#39;s coder ?">
+<meta property="og:description" content="之前magento 订单一直正常，后来查看订单的状态一直是在pengding 状态，查看后台报错了1Your current version of cURL php5 module is 7.29.0, which can prevent services that require TLS v1.2 from working correctly. It is recommended to upda">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-15T06:02:45.059Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Magento1.x paypal 支付不成功问题">
+<meta name="twitter:description" content="之前magento 订单一直正常，后来查看订单的状态一直是在pengding 状态，查看后台报错了1Your current version of cURL php5 module is 7.29.0, which can prevent services that require TLS v1.2 from working correctly. It is recommended to upda">
+    
+        <link rel="alternate" type="application/atom+xml" title="who&#39;s coder ?" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.1">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/images/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">whosc</h5>
+          <a href="mailto:放个签名" title="放个签名" class="mail">放个签名</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Whosc" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Magento1.x paypal 支付不成功问题</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Magento1.x paypal 支付不成功问题</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-01-14T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2018-01-15
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/">技术</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/Magento/">Magento</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#查看curl-的版本"><span class="post-toc-number">1.</span> <span class="post-toc-text">查看curl 的版本</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建一个源文件-并添加下面的内容"><span class="post-toc-number">2.</span> <span class="post-toc-text">创建一个源文件,并添加下面的内容:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#开启源并且更新curl"><span class="post-toc-number">3.</span> <span class="post-toc-text">开启源并且更新curl</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#检查curl-是否更新成功"><span class="post-toc-number">4.</span> <span class="post-toc-text">检查curl 是否更新成功</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#重启php-fpm"><span class="post-toc-number">5.</span> <span class="post-toc-text">重启php-fpm</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-magento-paypal-need-curl-update"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Magento1.x paypal 支付不成功问题</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-01-15 00:00:00" datetime="2018-01-14T16:00:00.000Z"  itemprop="datePublished">2018-01-15</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/">技术</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/Magento/">Magento</a></li></ul></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>之前magento 订单一直正常，后来查看订单的状态一直是在pengding 状态，查看后台报错了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Your current version of cURL php5 module is 7.29.0, which can prevent services that require TLS v1.2 from working correctly. It is recommended to update your cURL php5 module to version 7.34.0 or higher.</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>问题明显是要我们升级linux curl 的版本</p>
+<h3 id="查看curl-的版本"><a href="#查看curl-的版本" class="headerlink" title="查看curl 的版本"></a>查看curl 的版本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --version</span><br></pre></td></tr></table></figure>
+<h3 id="创建一个源文件-并添加下面的内容"><a href="#创建一个源文件-并添加下面的内容" class="headerlink" title="创建一个源文件,并添加下面的内容:"></a>创建一个源文件,并添加下面的内容:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> vim  /etc/yum.repos.d/city-fan.repo</span><br><span class="line"> </span><br><span class="line">[CityFan]</span><br><span class="line">name=City Fan Repo</span><br><span class="line">baseurl=http://www.city-fan.org/ftp/contrib/yum-repo/rhel$releasever/$basearch/</span><br><span class="line">enabled=1</span><br><span class="line">gpgcheck=0</span><br></pre></td></tr></table></figure>
+<h3 id="开启源并且更新curl"><a href="#开启源并且更新curl" class="headerlink" title="开启源并且更新curl"></a>开启源并且更新curl</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install epel-release -y</span><br><span class="line"></span><br><span class="line">yum update curl</span><br></pre></td></tr></table></figure>
+<h3 id="检查curl-是否更新成功"><a href="#检查curl-是否更新成功" class="headerlink" title="检查curl 是否更新成功"></a>检查curl 是否更新成功</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --version</span><br></pre></td></tr></table></figure>
+<h3 id="重启php-fpm"><a href="#重启php-fpm" class="headerlink" title="重启php-fpm"></a>重启php-fpm</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">path/php-fpm restart</span><br></pre></td></tr></table></figure>
+<p>再次登录在magento 后台，上面的报错后消失。测试paypal 支付，成功！</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2018-01-15T06:02:45.059Z" itemprop="dateUpdated">2018-01-15 14:02:45</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/magento-paypal-need-curl-update/" target="_blank" rel="external">https://whosc.github.io/magento-paypal-need-curl-update/</a>
+        
+    </div>
+    <footer>
+        <a href="https://whosc.github.io">
+            <img src="/images/avatar.jpg" alt="whosc">
+            whosc
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/magento/">magento</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://whosc.github.io/magento-paypal-need-curl-update/&title=《Magento1.x paypal 支付不成功问题》 — who's coder ?&pic=https://whosc.github.io/images/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://whosc.github.io/magento-paypal-need-curl-update/&title=《Magento1.x paypal 支付不成功问题》 — who's coder ?&source=之前magento 订单一直正常，后来查看订单的状态一直是在pengding 状态，查看后台报错了1Your current version of cUR..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://whosc.github.io/magento-paypal-need-curl-update/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Magento1.x paypal 支付不成功问题》 — who's coder ?&url=https://whosc.github.io/magento-paypal-need-curl-update/&via=https://whosc.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://whosc.github.io/magento-paypal-need-curl-update/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/create-aliyun-api-function/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">php 实现生成阿里云api 签名的代码示例</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+<section class="comments" id="comments">
+    <div id="disqus_thread"></div>
+    <script>
+    var disqus_shortname = 'whosc';
+    lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="bottom">
+		<div class="">
+			
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+		</div>
+        <p><span>whosc &copy; 2017 - 2018</span>
+            <span>
+                
+            </span>
+			
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+			
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://whosc.github.io/magento-paypal-need-curl-update/&title=《Magento1.x paypal 支付不成功问题》 — who's coder ?&pic=https://whosc.github.io/images/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://whosc.github.io/magento-paypal-need-curl-update/&title=《Magento1.x paypal 支付不成功问题》 — who's coder ?&source=之前magento 订单一直正常，后来查看订单的状态一直是在pengding 状态，查看后台报错了1Your current version of cUR..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://whosc.github.io/magento-paypal-need-curl-update/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Magento1.x paypal 支付不成功问题》 — who's coder ?&url=https://whosc.github.io/magento-paypal-need-curl-update/&via=https://whosc.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://whosc.github.io/magento-paypal-need-curl-update/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKklEQVR42u3aMRKDMAwF0dz/0qRNAZ79Eiksr6sMYcCPQiNZ+nzwun7W75X1/emd5P7WkiFDxraMa7kI4+nF6+ek7326R4YMGecw3gqa5BOQyMn3JkOGDBmcsb6/Fr5lyJAho8ZY/+YberoiQ4YMGZ0ilgdcEmpr11+oxWXIkLEho1NY/vv3X/obMmTI2IpxhWsdXnm47Ozh5mkyZMgYzeABrpMyclJtPzJkyJjN4EMVtaDJmwQklD9ekSFDxmhGGubSQ7Tah+Bt1KDLIUOGjBGM9BSr1hho5bD4XxkyZMxjpK1H/mKeYnJqfNwmQ4aMzRnkofxxb3VQ04AuQ4aM2Yxa6pYe0tUCLg++MmTIOIGRHqKRQ7FOayFNEGXIkDGbUUzCcBrH/+UhGFXhMmTIGMTotwE6ZXBaMAcVsAwZMgYx+HhWOgaRBlneeLi5IkOGjMMYtcEsXtamBTBKTGXIkDGa0dlKekDWSRmDZoAMGTJGMzpBsNOYrDUVbp4sQ4aMYxi15IwUop1WQTwzIkOGjKGM2hhEf8yCfD60KxkyZBzAqCVzPDXstDkRWIYMGUMZV7hqDc7OjARiy5AhYzSDL17ckuSv1jzoFNsyZMjYncGDbArrPzn43jJkyDiAkQ5G1JLI/naDYQsZMmQczAgGIBpJZzq6IUOGDBmd4a20hVlrl8qQIeMERifJIwf6nbGwFxqZMmTI2JxRKx3XV9LBCxLu42RRhgwZExhf7xt0chvJT9wAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.1"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.1" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!你来了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

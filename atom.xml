@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://whosc.github.io/"/>
-  <updated>2018-01-13T03:48:56.577Z</updated>
+  <updated>2018-01-15T06:02:45.059Z</updated>
   <id>https://whosc.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Magento1.x paypal 支付不成功问题</title>
+    <link href="https://whosc.github.io/magento-paypal-need-curl-update/"/>
+    <id>https://whosc.github.io/magento-paypal-need-curl-update/</id>
+    <published>2018-01-14T16:00:00.000Z</published>
+    <updated>2018-01-15T06:02:45.059Z</updated>
+    
+    <content type="html"><![CDATA[<p>之前magento 订单一直正常，后来查看订单的状态一直是在pengding 状态，查看后台报错了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Your current version of cURL php5 module is 7.29.0, which can prevent services that require TLS v1.2 from working correctly. It is recommended to update your cURL php5 module to version 7.34.0 or higher.</span><br></pre></td></tr></table></figure></p><a id="more"></a><p>问题明显是要我们升级linux curl 的版本</p><h3 id="查看curl-的版本"><a href="#查看curl-的版本" class="headerlink" title="查看curl 的版本"></a>查看curl 的版本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --version</span><br></pre></td></tr></table></figure><h3 id="创建一个源文件-并添加下面的内容"><a href="#创建一个源文件-并添加下面的内容" class="headerlink" title="创建一个源文件,并添加下面的内容:"></a>创建一个源文件,并添加下面的内容:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> vim  /etc/yum.repos.d/city-fan.repo</span><br><span class="line"> </span><br><span class="line">[CityFan]</span><br><span class="line">name=City Fan Repo</span><br><span class="line">baseurl=http://www.city-fan.org/ftp/contrib/yum-repo/rhel$releasever/$basearch/</span><br><span class="line">enabled=1</span><br><span class="line">gpgcheck=0</span><br></pre></td></tr></table></figure><h3 id="开启源并且更新curl"><a href="#开启源并且更新curl" class="headerlink" title="开启源并且更新curl"></a>开启源并且更新curl</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install epel-release -y</span><br><span class="line"></span><br><span class="line">yum update curl</span><br></pre></td></tr></table></figure><h3 id="检查curl-是否更新成功"><a href="#检查curl-是否更新成功" class="headerlink" title="检查curl 是否更新成功"></a>检查curl 是否更新成功</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --version</span><br></pre></td></tr></table></figure><h3 id="重启php-fpm"><a href="#重启php-fpm" class="headerlink" title="重启php-fpm"></a>重启php-fpm</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">path/php-fpm restart</span><br></pre></td></tr></table></figure><p>再次登录在magento 后台，上面的报错后消失。测试paypal 支付，成功！</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;之前magento 订单一直正常，后来查看订单的状态一直是在pengding 状态，查看后台报错了&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Your current version of cURL php5 module is 7.29.0, which can prevent services that require TLS v1.2 from working correctly. It is recommended to update your cURL php5 module to version 7.34.0 or higher.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="https://whosc.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="Magento" scheme="https://whosc.github.io/categories/%E6%8A%80%E6%9C%AF/Magento/"/>
+    
+    
+      <category term="magento" scheme="https://whosc.github.io/tags/magento/"/>
+    
+  </entry>
   
   <entry>
     <title>php 实现生成阿里云api 签名的代码示例</title>
@@ -60,9 +84,9 @@
       <category term="运维" scheme="https://whosc.github.io/categories/%E6%8A%80%E6%9C%AF/%E8%BF%90%E7%BB%B4/"/>
     
     
-      <category term="php" scheme="https://whosc.github.io/tags/php/"/>
-    
       <category term="运维" scheme="https://whosc.github.io/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="php" scheme="https://whosc.github.io/tags/php/"/>
     
   </entry>
   
