@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://whosc.github.io/"/>
-  <updated>2018-01-15T06:02:45.059Z</updated>
+  <updated>2018-01-16T07:11:28.288Z</updated>
   <id>https://whosc.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Add A Magento Currency Exchange Update Service</title>
+    <link href="https://whosc.github.io/add-a-magento-currency-exchange-update-service/"/>
+    <id>https://whosc.github.io/add-a-magento-currency-exchange-update-service/</id>
+    <published>2018-01-15T16:00:00.000Z</published>
+    <updated>2018-01-16T07:11:28.288Z</updated>
+    
+    <content type="html"><![CDATA[<p>The default currency exchange rate updater that ships with Magento Community Edition is broken.  </p><p>So, we need to replace the default Webservicex with another, working exchange rate updater.</p><h2 id="Custom-Module"><a href="#Custom-Module" class="headerlink" title="Custom Module"></a>Custom Module</h2><p><strong>File: app/etc/modules/TC_Currency.xml</strong><br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot;?&gt;</span><br><span class="line">&lt;config&gt;</span><br><span class="line">    &lt;modules&gt;</span><br><span class="line">        &lt;TC_Currency&gt;</span><br><span class="line">            &lt;active&gt;true&lt;/active&gt;</span><br><span class="line">            &lt;codePool&gt;local&lt;/codePool&gt;</span><br><span class="line">            &lt;depends&gt;</span><br><span class="line">                &lt;Mage_Adminhtml /&gt;</span><br><span class="line">                &lt;Mage_Core /&gt;</span><br><span class="line">            &lt;/depends&gt;</span><br><span class="line">        &lt;/TC_Currency&gt;</span><br><span class="line">    &lt;/modules&gt;</span><br><span class="line">&lt;/config&gt;</span><br></pre></td></tr></table></figure></p><p><strong>File: app/code/local/TC/Currency/etc/config.xml</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot;?&gt;</span><br><span class="line">&lt;config&gt;</span><br><span class="line">    &lt;modules&gt;</span><br><span class="line">        &lt;TC_Currency&gt;</span><br><span class="line">            &lt;version&gt;1.0.0&lt;/version&gt;</span><br><span class="line">        &lt;/TC_Currency&gt;</span><br><span class="line">    &lt;/modules&gt;</span><br><span class="line">    &lt;global&gt;</span><br><span class="line">        &lt;currency&gt;</span><br><span class="line">            &lt;import&gt;</span><br><span class="line">                &lt;services&gt;</span><br><span class="line">                    &lt;yahoofinance&gt;</span><br><span class="line">                        &lt;name&gt;Yahoo Finance&lt;/name&gt;</span><br><span class="line">                        &lt;model&gt;TC_Currency_Model_Yahoo&lt;/model&gt;</span><br><span class="line">                    &lt;/yahoofinance&gt;</span><br><span class="line">                &lt;/services&gt;</span><br><span class="line">            &lt;/import&gt;</span><br><span class="line">        &lt;/currency&gt;</span><br><span class="line">        &lt;models&gt;</span><br><span class="line">            &lt;tc_currency&gt;</span><br><span class="line">                &lt;class&gt;TC_Currency_Model_Yahoo&lt;/class&gt;</span><br><span class="line">            &lt;/tc_currency&gt;</span><br><span class="line">        &lt;/models&gt;</span><br><span class="line">    &lt;/global&gt;</span><br><span class="line">&lt;/config&gt;</span><br></pre></td></tr></table></figure><p><strong>File: app/code/local/TC/Currency/Model/Yahoo.php</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">class TC_Currency_Model_Yahoo extends Mage_Directory_Model_Currency_Import_Abstract</span><br><span class="line">&#123;</span><br><span class="line">    protected $_url = &apos;http://quote.yahoo.com/d/quotes.csv?s=&#123;&#123;CURRENCY_FROM&#125;&#125;&#123;&#123;CURRENCY_TO&#125;&#125;=X&amp;f=l1&amp;e=.csv&apos;;</span><br><span class="line">    protected $_messages = array();</span><br><span class="line"></span><br><span class="line">    protected function _convert($currencyFrom, $currencyTo, $retry=0) &#123;</span><br><span class="line">        $url = str_replace(&apos;&#123;&#123;CURRENCY_FROM&#125;&#125;&apos;, $currencyFrom, $this-&gt;_url);</span><br><span class="line">        $url = str_replace(&apos;&#123;&#123;CURRENCY_TO&#125;&#125;&apos;, $currencyTo, $url);</span><br><span class="line"></span><br><span class="line">        try &#123;</span><br><span class="line">            sleep(1);</span><br><span class="line">            $handle = fopen($url, &quot;r&quot;);</span><br><span class="line">            $exchange_rate = fread($handle, 2000);</span><br><span class="line">            fclose($handle);</span><br><span class="line"></span><br><span class="line">            if (!$exchange_rate) &#123;</span><br><span class="line">                $this-&gt;_messages[] = Mage::helper(&apos;directory&apos;)-&gt;__(&apos;Cannot retrieve rate from %s&apos;, $url);</span><br><span class="line">                return null;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            return (float) $exchange_rate * 1.0;</span><br><span class="line">        &#125; catch (Exception $e) &#123;</span><br><span class="line">            if ($retry == 0) &#123;</span><br><span class="line">                $this-&gt;_convert($currencyFrom, $currencyTo, 1);</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                $this-&gt;_messages[] = Mage::helper(&apos;directory&apos;)-&gt;__(&apos;Cannot retrieve rate from %s&apos;, $url);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>By default, the Webservicex model sits at a deeper level than this, we’re just keeping the structure simple.</p><p>Our module is finished. You’ll need to flush the caches once this has been uploaded to your Magento installation. The currency update service appears in the following select lists:</p><ul><li>Admin &gt; System &gt; Manage Currency &gt; Rates  </li><li>Admin &gt; System &gt; Configuration &gt; Currency Setup &gt; Scheduled Import Settings &gt; [Service]</li></ul><p><strong>[Note]:</strong> the <code>http://quote.yahoo.com/d/quotes.csv?s==X&amp;f=l1&amp;e=.csv</code> is not work now, you need replace an api which can get the data you want !</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;The default currency exchange rate updater that ships with Magento Community Edition is broken.  &lt;/p&gt;
+&lt;p&gt;So, we need to replace the default Webservicex with another, working exchange rate updater.&lt;/p&gt;
+&lt;h2 id=&quot;Custom-Module&quot;&gt;&lt;a href=&quot;#Custom-Module&quot; class=&quot;headerlink&quot; title=&quot;Custom Module&quot;&gt;&lt;/a&gt;Custom Module&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;File: app/etc/modules/TC_Currency.xml&lt;/strong&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="https://whosc.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="Magento" scheme="https://whosc.github.io/categories/%E6%8A%80%E6%9C%AF/Magento/"/>
+    
+    
+      <category term="magento" scheme="https://whosc.github.io/tags/magento/"/>
+    
+  </entry>
   
   <entry>
     <title>Magento1.x paypal 支付不成功问题</title>
@@ -84,9 +110,9 @@
       <category term="运维" scheme="https://whosc.github.io/categories/%E6%8A%80%E6%9C%AF/%E8%BF%90%E7%BB%B4/"/>
     
     
-      <category term="php" scheme="https://whosc.github.io/tags/php/"/>
-    
       <category term="运维" scheme="https://whosc.github.io/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="php" scheme="https://whosc.github.io/tags/php/"/>
     
   </entry>
   

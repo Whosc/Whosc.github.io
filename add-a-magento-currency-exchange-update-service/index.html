@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Add A Magento Currency Exchange Update Service | who&#39;s coder ? | Life is always hard!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#2882C9">
+    
+    
+    <meta name="keywords" content="magento">
+    <meta name="description" content="The default currency exchange rate updater that ships with Magento Community Edition is broken.   So, we need to replace the default Webservicex with another, working exchange rate updater. Custom Mod">
+<meta name="keywords" content="magento">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Add A Magento Currency Exchange Update Service">
+<meta property="og:url" content="https://whosc.github.io/add-a-magento-currency-exchange-update-service/index.html">
+<meta property="og:site_name" content="who&#39;s coder ?">
+<meta property="og:description" content="The default currency exchange rate updater that ships with Magento Community Edition is broken.   So, we need to replace the default Webservicex with another, working exchange rate updater. Custom Mod">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-16T07:11:28.288Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Add A Magento Currency Exchange Update Service">
+<meta name="twitter:description" content="The default currency exchange rate updater that ships with Magento Community Edition is broken.   So, we need to replace the default Webservicex with another, working exchange rate updater. Custom Mod">
+    
+        <link rel="alternate" type="application/atom+xml" title="who&#39;s coder ?" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.1">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/images/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">whosc</h5>
+          <a href="mailto:放个签名" title="放个签名" class="mail">放个签名</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Whosc" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Add A Magento Currency Exchange Update Service</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Add A Magento Currency Exchange Update Service</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-01-15T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2018-01-16
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/">技术</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/Magento/">Magento</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Custom-Module"><span class="post-toc-number">1.</span> <span class="post-toc-text">Custom Module</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-add-a-magento-currency-exchange-update-service"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Add A Magento Currency Exchange Update Service</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-01-16 00:00:00" datetime="2018-01-15T16:00:00.000Z"  itemprop="datePublished">2018-01-16</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/">技术</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/Magento/">Magento</a></li></ul></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>The default currency exchange rate updater that ships with Magento Community Edition is broken.  </p>
+<p>So, we need to replace the default Webservicex with another, working exchange rate updater.</p>
+<h2 id="Custom-Module"><a href="#Custom-Module" class="headerlink" title="Custom Module"></a>Custom Module</h2><p><strong>File: app/etc/modules/TC_Currency.xml</strong><br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot;?&gt;</span><br><span class="line">&lt;config&gt;</span><br><span class="line">    &lt;modules&gt;</span><br><span class="line">        &lt;TC_Currency&gt;</span><br><span class="line">            &lt;active&gt;true&lt;/active&gt;</span><br><span class="line">            &lt;codePool&gt;local&lt;/codePool&gt;</span><br><span class="line">            &lt;depends&gt;</span><br><span class="line">                &lt;Mage_Adminhtml /&gt;</span><br><span class="line">                &lt;Mage_Core /&gt;</span><br><span class="line">            &lt;/depends&gt;</span><br><span class="line">        &lt;/TC_Currency&gt;</span><br><span class="line">    &lt;/modules&gt;</span><br><span class="line">&lt;/config&gt;</span><br></pre></td></tr></table></figure></p>
+<p><strong>File: app/code/local/TC/Currency/etc/config.xml</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot;?&gt;</span><br><span class="line">&lt;config&gt;</span><br><span class="line">    &lt;modules&gt;</span><br><span class="line">        &lt;TC_Currency&gt;</span><br><span class="line">            &lt;version&gt;1.0.0&lt;/version&gt;</span><br><span class="line">        &lt;/TC_Currency&gt;</span><br><span class="line">    &lt;/modules&gt;</span><br><span class="line">    &lt;global&gt;</span><br><span class="line">        &lt;currency&gt;</span><br><span class="line">            &lt;import&gt;</span><br><span class="line">                &lt;services&gt;</span><br><span class="line">                    &lt;yahoofinance&gt;</span><br><span class="line">                        &lt;name&gt;Yahoo Finance&lt;/name&gt;</span><br><span class="line">                        &lt;model&gt;TC_Currency_Model_Yahoo&lt;/model&gt;</span><br><span class="line">                    &lt;/yahoofinance&gt;</span><br><span class="line">                &lt;/services&gt;</span><br><span class="line">            &lt;/import&gt;</span><br><span class="line">        &lt;/currency&gt;</span><br><span class="line">        &lt;models&gt;</span><br><span class="line">            &lt;tc_currency&gt;</span><br><span class="line">                &lt;class&gt;TC_Currency_Model_Yahoo&lt;/class&gt;</span><br><span class="line">            &lt;/tc_currency&gt;</span><br><span class="line">        &lt;/models&gt;</span><br><span class="line">    &lt;/global&gt;</span><br><span class="line">&lt;/config&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>File: app/code/local/TC/Currency/Model/Yahoo.php</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">class TC_Currency_Model_Yahoo extends Mage_Directory_Model_Currency_Import_Abstract</span><br><span class="line">&#123;</span><br><span class="line">    protected $_url = &apos;http://quote.yahoo.com/d/quotes.csv?s=&#123;&#123;CURRENCY_FROM&#125;&#125;&#123;&#123;CURRENCY_TO&#125;&#125;=X&amp;f=l1&amp;e=.csv&apos;;</span><br><span class="line">    protected $_messages = array();</span><br><span class="line"></span><br><span class="line">    protected function _convert($currencyFrom, $currencyTo, $retry=0) &#123;</span><br><span class="line">        $url = str_replace(&apos;&#123;&#123;CURRENCY_FROM&#125;&#125;&apos;, $currencyFrom, $this-&gt;_url);</span><br><span class="line">        $url = str_replace(&apos;&#123;&#123;CURRENCY_TO&#125;&#125;&apos;, $currencyTo, $url);</span><br><span class="line"></span><br><span class="line">        try &#123;</span><br><span class="line">            sleep(1);</span><br><span class="line">            $handle = fopen($url, &quot;r&quot;);</span><br><span class="line">            $exchange_rate = fread($handle, 2000);</span><br><span class="line">            fclose($handle);</span><br><span class="line"></span><br><span class="line">            if (!$exchange_rate) &#123;</span><br><span class="line">                $this-&gt;_messages[] = Mage::helper(&apos;directory&apos;)-&gt;__(&apos;Cannot retrieve rate from %s&apos;, $url);</span><br><span class="line">                return null;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            return (float) $exchange_rate * 1.0;</span><br><span class="line">        &#125; catch (Exception $e) &#123;</span><br><span class="line">            if ($retry == 0) &#123;</span><br><span class="line">                $this-&gt;_convert($currencyFrom, $currencyTo, 1);</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                $this-&gt;_messages[] = Mage::helper(&apos;directory&apos;)-&gt;__(&apos;Cannot retrieve rate from %s&apos;, $url);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>By default, the Webservicex model sits at a deeper level than this, we’re just keeping the structure simple.</p>
+<p>Our module is finished. You’ll need to flush the caches once this has been uploaded to your Magento installation. The currency update service appears in the following select lists:</p>
+<ul>
+<li>Admin &gt; System &gt; Manage Currency &gt; Rates  </li>
+<li>Admin &gt; System &gt; Configuration &gt; Currency Setup &gt; Scheduled Import Settings &gt; [Service]</li>
+</ul>
+<p><strong>[Note]:</strong> the <code>http://quote.yahoo.com/d/quotes.csv?s==X&amp;f=l1&amp;e=.csv</code> is not work now, you need replace an api which can get the data you want !</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最終更新：<time datetime="2018-01-16T07:11:28.288Z" itemprop="dateUpdated">2018-01-16 15:11:28</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/add-a-magento-currency-exchange-update-service/" target="_blank" rel="external">https://whosc.github.io/add-a-magento-currency-exchange-update-service/</a>
+        
+    </div>
+    <footer>
+        <a href="https://whosc.github.io">
+            <img src="/images/avatar.jpg" alt="whosc">
+            whosc
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/magento/">magento</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://whosc.github.io/add-a-magento-currency-exchange-update-service/&title=《Add A Magento Currency Exchange Update Service》 — who's coder ?&pic=https://whosc.github.io/images/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://whosc.github.io/add-a-magento-currency-exchange-update-service/&title=《Add A Magento Currency Exchange Update Service》 — who's coder ?&source=The default currency exchange rate updater that ships with Magento Community ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://whosc.github.io/add-a-magento-currency-exchange-update-service/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Add A Magento Currency Exchange Update Service》 — who's coder ?&url=https://whosc.github.io/add-a-magento-currency-exchange-update-service/&via=https://whosc.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://whosc.github.io/add-a-magento-currency-exchange-update-service/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/magento-paypal-need-curl-update/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Magento1.x paypal 支付不成功问题</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+<section class="comments" id="comments">
+    <div id="disqus_thread"></div>
+    <script>
+    var disqus_shortname = 'whosc';
+    lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/images/wechat.png" data-alipay="/images/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="bottom">
+		<div class="">
+			
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+		</div>
+        <p><span>whosc &copy; 2017 - 2018</span>
+            <span>
+                
+            </span>
+			
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+			
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://whosc.github.io/add-a-magento-currency-exchange-update-service/&title=《Add A Magento Currency Exchange Update Service》 — who's coder ?&pic=https://whosc.github.io/images/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://whosc.github.io/add-a-magento-currency-exchange-update-service/&title=《Add A Magento Currency Exchange Update Service》 — who's coder ?&source=The default currency exchange rate updater that ships with Magento Community ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://whosc.github.io/add-a-magento-currency-exchange-update-service/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Add A Magento Currency Exchange Update Service》 — who's coder ?&url=https://whosc.github.io/add-a-magento-currency-exchange-update-service/&via=https://whosc.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://whosc.github.io/add-a-magento-currency-exchange-update-service/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtElEQVR42u3aQY7bQAwEwP3/p5NrgMBSNzkT7Aalk2HL0pQOQ4rk11d8/PrjeP717zM/fX7+9fk6hw88PDy8xdKfl5gDZufPvvl0Fzw8PLzbvE87arIp52FjFn7yIIGHh4f3U3g5cpYu4+Hh4f1/vNnS89Q5Xw8eHh7ev+RtSrH5o3lOl2eh5VitBQ8PDy/m5V2k7/P5Sn8PDw8Pb91Vbzfr5Pqz9QxXi4eHh3eBNyvRPg9O5eXX/DqrUjIeHh7eUV476tSemTygdrSrSL7x8PDwLvDyQmr+Tb64U2MKL+fj4eHhHeU9L7rdoNutP3lM7cDBy7sCHh4e3iHeZlwguk15r1mxeFgVxsPDw5vXP7/ybToPHnmpNy9brEav8PDw8I7y2jAwK622owBtmbieGsPDw8M7lFgnqXDe7toXGjajWnh4eHhneW1jPlnW5gHNEvGP/8LDw8O7zGtHoGYPJbljsp4Ij4eHh3eNN2tHtZt4Pi7QpuMvpVs8PDy8C7xZobYtE7SlhFmQKGbK8PDw8Ea8dkJpMwLVJuunghAeHh7ePV6bELebeD6ysB8vwMPDw7vHy4sReQo7o7ZDCdH3eHh4eBd4mzJE/tqfp85tMCjeEvDw8PAO8WZDV7NhrE1dZJiy4+Hh4V3gzRYxCxizgkJ+/kuXDw8PD+8ar13iqdZ+W4zI14yHh4d3j7dpOO0bZu1oQv4ygIeHh3eP17ayNuXapOV27MDDw8O7BtuXAIpG/qioUf+Kh4eHd4G3CR6bsPHcxNp8PhYb8fDw8OLeepLytgWIs4+gDgx4eHh413hJ5+hs4fVUNHv5Fx4eHt634Z0qUsxaZcXIFx4eHt635M0eRH6dfLihiFp4eHh4a17e9Nospa215mn0S2DAw8PDO8prX/hPFR0241lX+nt4eHh477zfb0PkKUzUYqQAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.1"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.1" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!你来了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

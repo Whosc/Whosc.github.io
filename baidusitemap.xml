@@ -4,6 +4,29 @@
 
     
   <url>
+    <loc>https://whosc.github.io/add-a-magento-currency-exchange-update-service/</loc>
+    <lastmod>2018-01-16T07:11:28.288Z</lastmod>
+    <data>
+        <display>
+        <title>Add A Magento Currency Exchange Update Service</title>
+        <pubTime>2018-01-15T16:00:00.000Z</pubTime>
+        
+        <tag>magento</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://whosc.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+             
+              <breadCrumb title="Magento" url="https://whosc.github.io/categories/%E6%8A%80%E6%9C%AF/Magento/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://whosc.github.io/magento-paypal-need-curl-update/</loc>
     <lastmod>2018-01-15T06:02:45.059Z</lastmod>
     <data>
@@ -59,9 +82,9 @@
         <title>php7 安装imap 扩展</title>
         <pubTime>2018-01-10T16:00:00.000Z</pubTime>
         
-        <tag>php</tag>
-         
         <tag>运维</tag>
+         
+        <tag>php</tag>
          
          
            
