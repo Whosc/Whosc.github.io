@@ -4,6 +4,54 @@
 
     
   <url>
+    <loc>https://whosc.github.io/set-debug-mode-for-laravel-css-js-cache/</loc>
+    <lastmod>2018-01-23T03:45:44.522Z</lastmod>
+    <data>
+        <display>
+        <title>给laravel 框架的css 、js 设置一个可以手动开关的开发模式</title>
+        <pubTime>2018-01-22T16:00:00.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>laravel</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://whosc.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+             
+              <breadCrumb title="laravel" url="https://whosc.github.io/categories/%E6%8A%80%E6%9C%AF/laravel/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://whosc.github.io/magento%20can%20not%20delete%20attribute%20options/</loc>
+    <lastmod>2018-01-22T06:34:31.938Z</lastmod>
+    <data>
+        <display>
+        <title>Magento can not delete attribute options</title>
+        <pubTime>2018-01-21T16:00:00.000Z</pubTime>
+        
+        <tag>magento</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://whosc.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+             
+              <breadCrumb title="Magento" url="https://whosc.github.io/categories/%E6%8A%80%E6%9C%AF/Magento/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://whosc.github.io/add-a-magento-currency-exchange-update-service/</loc>
     <lastmod>2018-01-16T07:11:28.288Z</lastmod>
     <data>
@@ -82,9 +130,9 @@
         <title>php7 安装imap 扩展</title>
         <pubTime>2018-01-10T16:00:00.000Z</pubTime>
         
-        <tag>运维</tag>
-         
         <tag>php</tag>
+         
+        <tag>运维</tag>
          
          
            

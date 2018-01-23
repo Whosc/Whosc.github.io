@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>给laravel 框架的css 、js 设置一个可以手动开关的开发模式 | who&#39;s coder ? | Life is always hard!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#2882C9">
+    
+    
+    <meta name="keywords" content="php,laravel">
+    <meta name="description" content="最近的新项目使用到了laravel 框架开发项目，修改js 的时候传到线上的服务器上，一直刷新没有反应，琢磨着给他设置一个开发模式，可以手动设置开、关。这样在测试的时候方便一些，同时不影响正常的线上网站缓存。 定义一个用来设置的常量1define(&amp;quot;CSSJS_DEBUG&amp;quot; , &amp;apos;0&amp;apos;);                        // 开启css js">
+<meta name="keywords" content="php,laravel">
+<meta property="og:type" content="article">
+<meta property="og:title" content="给laravel 框架的css 、js 设置一个可以手动开关的开发模式">
+<meta property="og:url" content="https://whosc.github.io/set-debug-mode-for-laravel-css-js-cache/index.html">
+<meta property="og:site_name" content="who&#39;s coder ?">
+<meta property="og:description" content="最近的新项目使用到了laravel 框架开发项目，修改js 的时候传到线上的服务器上，一直刷新没有反应，琢磨着给他设置一个开发模式，可以手动设置开、关。这样在测试的时候方便一些，同时不影响正常的线上网站缓存。 定义一个用来设置的常量1define(&amp;quot;CSSJS_DEBUG&amp;quot; , &amp;apos;0&amp;apos;);                        // 开启css js">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-23T03:45:44.522Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="给laravel 框架的css 、js 设置一个可以手动开关的开发模式">
+<meta name="twitter:description" content="最近的新项目使用到了laravel 框架开发项目，修改js 的时候传到线上的服务器上，一直刷新没有反应，琢磨着给他设置一个开发模式，可以手动设置开、关。这样在测试的时候方便一些，同时不影响正常的线上网站缓存。 定义一个用来设置的常量1define(&amp;quot;CSSJS_DEBUG&amp;quot; , &amp;apos;0&amp;apos;);                        // 开启css js">
+    
+        <link rel="alternate" type="application/atom+xml" title="who&#39;s coder ?" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.1">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/images/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">whosc</h5>
+          <a href="mailto:放个签名" title="放个签名" class="mail">放个签名</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Whosc" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">给laravel 框架的css 、js 设置一个可以手动开关的开发模式</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">给laravel 框架的css 、js 设置一个可以手动开关的开发模式</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-01-22T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2018-01-23
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/">技术</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/laravel/">laravel</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#定义一个用来设置的常量"><span class="post-toc-number">1.</span> <span class="post-toc-text">定义一个用来设置的常量</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#在自定义的自动加载的方法中，添加一个方法"><span class="post-toc-number">2.</span> <span class="post-toc-text">在自定义的自动加载的方法中，添加一个方法.</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#给新加的css-js-添加后缀，这样可以不缓存css-js-的文件。如下："><span class="post-toc-number">3.</span> <span class="post-toc-text">给新加的css js 添加后缀，这样可以不缓存css js 的文件。如下：</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-set-debug-mode-for-laravel-css-js-cache"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">给laravel 框架的css 、js 设置一个可以手动开关的开发模式</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-01-23 00:00:00" datetime="2018-01-22T16:00:00.000Z"  itemprop="datePublished">2018-01-23</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/">技术</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/laravel/">laravel</a></li></ul></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>最近的新项目使用到了laravel 框架开发项目，修改js 的时候传到线上的服务器上，一直刷新没有反应，琢磨着给他设置一个开发模式，可以手动设置开、关。这样在测试的时候方便一些，同时不影响正常的线上网站缓存。</p>
+<h2 id="定义一个用来设置的常量"><a href="#定义一个用来设置的常量" class="headerlink" title="定义一个用来设置的常量"></a>定义一个用来设置的常量</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">define(&quot;CSSJS_DEBUG&quot; , &apos;0&apos;);                        // 开启css js 调试模式，不缓存。</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="在自定义的自动加载的方法中，添加一个方法"><a href="#在自定义的自动加载的方法中，添加一个方法" class="headerlink" title="在自定义的自动加载的方法中，添加一个方法."></a>在自定义的自动加载的方法中，添加一个方法.</h2><p>常量设置成真的时候开启开发模式，不缓存css 和js ,否则没小时自动更新一下缓存。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * css js  调试模式不缓存</span><br><span class="line"> * </span><br><span class="line"> * @return str</span><br><span class="line"> */</span><br><span class="line">function cssJsDebug() &#123;</span><br><span class="line">	</span><br><span class="line">	if(CSSJS_DEBUG)&#123;</span><br><span class="line">		return &apos;?v=&apos;.time();</span><br><span class="line">	&#125;else&#123;</span><br><span class="line">		return &apos;?v=&apos;. date(&quot;Ymdi&quot;,time());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="给新加的css-js-添加后缀，这样可以不缓存css-js-的文件。如下："><a href="#给新加的css-js-添加后缀，这样可以不缓存css-js-的文件。如下：" class="headerlink" title="给新加的css js 添加后缀，这样可以不缓存css js 的文件。如下："></a>给新加的css js 添加后缀，这样可以不缓存css js 的文件。如下：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;link href=&quot;&#123;&#123;asset(&apos;admin/custom/plugins/layui/css/layui.css&apos;.cssJsDebug() )&#125;&#125;&quot; rel=&quot;stylesheet&quot;&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;&#123;&#123;asset(&apos;admin/js/jquery-2.1.1.min.js&apos;.cssJsDebug() )&#125;&#125;&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2018-01-23T03:45:44.522Z" itemprop="dateUpdated">2018-01-23 11:45:44</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/set-debug-mode-for-laravel-css-js-cache/" target="_blank" rel="external">https://whosc.github.io/set-debug-mode-for-laravel-css-js-cache/</a>
+        
+    </div>
+    <footer>
+        <a href="https://whosc.github.io">
+            <img src="/images/avatar.jpg" alt="whosc">
+            whosc
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/laravel/">laravel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://whosc.github.io/set-debug-mode-for-laravel-css-js-cache/&title=《给laravel 框架的css 、js 设置一个可以手动开关的开发模式》 — who's coder ?&pic=https://whosc.github.io/images/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://whosc.github.io/set-debug-mode-for-laravel-css-js-cache/&title=《给laravel 框架的css 、js 设置一个可以手动开关的开发模式》 — who's coder ?&source=最近的新项目使用到了laravel 框架开发项目，修改js 的时候传到线上的服务器上，一直刷新没有反应，琢磨着给他设置一个开发模式，可以手动设置开、关。这..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://whosc.github.io/set-debug-mode-for-laravel-css-js-cache/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《给laravel 框架的css 、js 设置一个可以手动开关的开发模式》 — who's coder ?&url=https://whosc.github.io/set-debug-mode-for-laravel-css-js-cache/&via=https://whosc.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://whosc.github.io/set-debug-mode-for-laravel-css-js-cache/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/magento can not delete attribute options/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Magento can not delete attribute options</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+<section class="comments" id="comments">
+    <div id="disqus_thread"></div>
+    <script>
+    var disqus_shortname = 'whosc';
+    lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/images/wechat.png" data-alipay="/images/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="bottom">
+		<div class="">
+			
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+		</div>
+        <p><span>whosc &copy; 2017 - 2018</span>
+            <span>
+                
+            </span>
+			
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+			
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://whosc.github.io/set-debug-mode-for-laravel-css-js-cache/&title=《给laravel 框架的css 、js 设置一个可以手动开关的开发模式》 — who's coder ?&pic=https://whosc.github.io/images/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://whosc.github.io/set-debug-mode-for-laravel-css-js-cache/&title=《给laravel 框架的css 、js 设置一个可以手动开关的开发模式》 — who's coder ?&source=最近的新项目使用到了laravel 框架开发项目，修改js 的时候传到线上的服务器上，一直刷新没有反应，琢磨着给他设置一个开发模式，可以手动设置开、关。这..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://whosc.github.io/set-debug-mode-for-laravel-css-js-cache/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《给laravel 框架的css 、js 设置一个可以手动开关的开发模式》 — who's coder ?&url=https://whosc.github.io/set-debug-mode-for-laravel-css-js-cache/&via=https://whosc.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://whosc.github.io/set-debug-mode-for-laravel-css-js-cache/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACuklEQVR42u3aQW7DMAwEwPz/0+m1BRpnSYpODuNT4Ka2RgVEdanHI76ev67rO8kTXj1n8vzRhYeHhzcY+uRlr36aPzO5n48ZDw8Pb5v3akXNP48GcQlL3vvyPh4eHt4X8JLlPt/ZXo+k9xY8PDy8b+PlocP1d64LSW8MeHh4eHfykjCiOrg8YuiFHYezFjw8PLxaDhB1kb7n80p/Dw8PD2/cVZ8suL2ZTgpSYbR4eHh4C7x8KNWtdh7gVp9QnSA8PDy8s7xqDHFNTcpDHhkfiEjw8PDw1niTtlbvKNVkygq/hYeHh7fASwbRiwMmJWSlUOHh4eEd5SWhbX7IqbppzstSMzLGw8PDW+DlZaA33Hxqksj4wMkyPDw8vDEvD0avt7P5drm3jW6WBzw8PLw1Xh7U5uzJQp9v2cthBB4eHt4Cr1cAeiFs8rS82PxzBw8PD2+Bly+4Z9nVspF8Hw8PD+9O3mTxnQy316uqHs/Cw8PDO8WbbFjzUpFvsvPjXNF48PDw8BZ4+fGp3sGCamibFIn82AEeHh7eBi9ZgvPFureXnxyrevN2PDw8vDVetTVVPQowiXGjY1VJMo2Hh4d3lJcPMZ+U6lCSSUnCETw8PLw7eXkzvgrO3zKfjj938PDw8BZ4ySB6jat8k50/bfJbeHh4eGd5SVMqb0TlzbBy+7/6F8PDw8O7kZeHtr1JqR4UyHnlrBoPDw9vgVdd9HvhbKGtVVz58fDw8M7ynsUrb3rl36+GxUkRis6U4eHh4bV4+ZUfmaoGr9VQuDeVeHh4eGd5vXZXrwAk7bF8KqPCgIeHh7fG622Re0N8HL0KWQseHh7eh3jJfjX/Ti9WKJ8mw8PDw/soLy8GUWu/GOmW41o8PDy8NV41CDi7yZ7HwW8KAx4eHt5RXvUf/jwUyLfLPcxKnoGHh4d3df0A3gEiFqw3+1UAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.1"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.1" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!你来了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
